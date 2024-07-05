@@ -11,6 +11,7 @@
 		CE92AD872C37688300DC1258 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD862C37688300DC1258 /* ContentView.swift */; };
 		CE92AD892C37688600DC1258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE92AD882C37688600DC1258 /* Assets.xcassets */; };
 		CE92AD8C2C37688600DC1258 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE92AD8B2C37688600DC1258 /* Preview Assets.xcassets */; };
+		CE92AD982C37710700DC1258 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD972C37710700DC1258 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CE92AD862C37688300DC1258 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE92AD882C37688600DC1258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE92AD8B2C37688600DC1258 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE92AD972C37710700DC1258 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,10 @@
 		CE92AD832C37688300DC1258 /* Tim Store */ = {
 			isa = PBXGroup;
 			children = (
+				CE92AD922C37707600DC1258 /* UI */,
+				CE92AD932C37707F00DC1258 /* Models */,
+				CE92AD942C37708900DC1258 /* Services */,
+				CE92AD952C3770B900DC1258 /* Utilities */,
 				CE92AD842C37688300DC1258 /* Tim_StoreApp.swift */,
 				CE92AD862C37688300DC1258 /* ContentView.swift */,
 				CE92AD882C37688600DC1258 /* Assets.xcassets */,
@@ -65,6 +71,43 @@
 				CE92AD8B2C37688600DC1258 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE92AD922C37707600DC1258 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CE92AD962C3770E800DC1258 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CE92AD932C37707F00DC1258 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE92AD942C37708900DC1258 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE92AD952C3770B900DC1258 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CE92AD962C3770E800DC1258 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE92AD972C37710700DC1258 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE92AD982C37710700DC1258 /* HomeView.swift in Sources */,
 				CE92AD872C37688300DC1258 /* ContentView.swift in Sources */,
 				CE92AD852C37688300DC1258 /* Tim_StoreApp.swift in Sources */,
 			);
