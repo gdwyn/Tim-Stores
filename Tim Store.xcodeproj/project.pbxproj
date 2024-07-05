@@ -12,6 +12,11 @@
 		CE92AD892C37688600DC1258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE92AD882C37688600DC1258 /* Assets.xcassets */; };
 		CE92AD8C2C37688600DC1258 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE92AD8B2C37688600DC1258 /* Preview Assets.xcassets */; };
 		CE92AD982C37710700DC1258 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD972C37710700DC1258 /* HomeView.swift */; };
+		CE92AD9C2C3774E400DC1258 /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD9B2C3774E400DC1258 /* ProductsModel.swift */; };
+		CE92AD9E2C37751600DC1258 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD9D2C37751600DC1258 /* ItemsModel.swift */; };
+		CE92ADA02C3775AA00DC1258 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD9F2C3775AA00DC1258 /* PriceModel.swift */; };
+		CE92ADA22C3775F300DC1258 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA12C3775F300DC1258 /* PhotoModel.swift */; };
+		CE92ADA52C37781700DC1258 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA42C37781700DC1258 /* AddButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		CE92AD882C37688600DC1258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE92AD8B2C37688600DC1258 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE92AD972C37710700DC1258 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE92AD9B2C3774E400DC1258 /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
+		CE92AD9D2C37751600DC1258 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
+		CE92AD9F2C3775AA00DC1258 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
+		CE92ADA12C3775F300DC1258 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		CE92ADA42C37781700DC1258 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				CE92AD962C3770E800DC1258 /* Views */,
+				CE92ADA32C3777FC00DC1258 /* Components */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -84,6 +95,10 @@
 		CE92AD932C37707F00DC1258 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE92AD9B2C3774E400DC1258 /* ProductsModel.swift */,
+				CE92AD9D2C37751600DC1258 /* ItemsModel.swift */,
+				CE92AD9F2C3775AA00DC1258 /* PriceModel.swift */,
+				CE92ADA12C3775F300DC1258 /* PhotoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +123,14 @@
 				CE92AD972C37710700DC1258 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CE92ADA32C3777FC00DC1258 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE92ADA42C37781700DC1258 /* AddButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +205,12 @@
 			files = (
 				CE92AD982C37710700DC1258 /* HomeView.swift in Sources */,
 				CE92AD872C37688300DC1258 /* ContentView.swift in Sources */,
+				CE92AD9E2C37751600DC1258 /* ItemsModel.swift in Sources */,
 				CE92AD852C37688300DC1258 /* Tim_StoreApp.swift in Sources */,
+				CE92ADA22C3775F300DC1258 /* PhotoModel.swift in Sources */,
+				CE92AD9C2C3774E400DC1258 /* ProductsModel.swift in Sources */,
+				CE92ADA02C3775AA00DC1258 /* PriceModel.swift in Sources */,
+				CE92ADA52C37781700DC1258 /* AddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
