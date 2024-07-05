@@ -1,18 +1,28 @@
+////
+////  ContentView.swift
+////  Tim Store
+////
+////  Created by Godwin IE on 05/07/2024.
+////
 //
-//  ContentView.swift
-//  Tim Store
+//import SwiftUI
 //
-//  Created by Godwin IE on 05/07/2024.
+//struct ContentView: View {
+//    
+//    @State private var products: ProductsModel
 //
-
-import SwiftUI
-
-struct ContentView: View {
-    var body: some View {
-        HomeView()
-    }
-}
-
-#Preview {
-    ContentView()
-}
+//    var body: some View {
+//        HomeView(products: products)
+//            .task{
+//                do {
+//                    products = try await getProducts()
+//                } catch {
+//                    
+//                }
+//            }
+//    }
+//}
+//
+////#Preview {
+////    ContentView(products: <#ProductsModel#>)
+////}

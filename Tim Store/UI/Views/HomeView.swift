@@ -11,19 +11,10 @@ struct HomeView: View {
     
     let columns = [GridItem(.adaptive(minimum: 140))]
     
-    struct testItem: Identifiable {
-        let id = UUID()
-        let name: String
-        let description: String
-        let photos: String
-    }
+    @State private var products: [ItemsModel] = []
     
-    let testItems = [
-        testItem(name: "Wahala", description: "Plenty wahala", photos: "logo"),
-        testItem(name: "Wahala", description: "Plenty wahala", photos: "logo"),
-        testItem(name: "Wahala", description: "Plenty wahala", photos: "logo"),
-        testItem(name: "Wahala", description: "Plenty wahala", photos: "logo"),
-    ]
+    @State private var isLoading = false
+    @State private var errorMessage: String?
 
     var body: some View {
         VStack(spacing: 24) {
@@ -32,46 +23,130 @@ struct HomeView: View {
                 .frame(width: 34, height: 34)
                 .scaledToFit()
             
-            ScrollView(showsIndicators: false) {
-                LazyVGrid (columns: columns) {
-                    ForEach(testItems) { item in
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                            
-                            Image(item.photos)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 130)
-                                .padding(.vertical, 20)
-                            
-                            Spacer()
-                            
-                            HStack {
-                                //Text("$\(item.price, specifier: "%.2f")")
-                                Text("$$$")
-                                    .bold()
-                                    .multilineTextAlignment(.leading)
-                                    .foregroundStyle(.black)
+            if isLoading {
+                ProgressView()
+            } else {
+                ScrollView(showsIndicators: false) {
+                    LazyVGrid (columns: columns) {
+                        ForEach( products) { item in
+                            VStack(alignment: .leading) {
+                                
+                                Text(item.name)
+                                
+                                if let imageUrl = item.photos.first?.url, 
+                                    let url = URL(string: "https://api.timbu.cloud/images/\(imageUrl)") {
+                                    
+                                    AsyncImage(url: url) { image in
+                                        image
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 130)
+                                            .padding(.vertical, 20)
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                }
+                                
                                 
                                 Spacer()
                                 
-                                AddButton(icon: "plus") {}
+                                HStack {
+//                                    if let price =
+//                                        item.currentPrice.first?.NGN.first {
+//                                        Text("NGN \(price ?? 0.0, specifier: "%.2f")") // Adjusted to handle optional Double
+//                                            .bold()
+//                                            .multilineTextAlignment(.leading)
+//                                            .foregroundColor(.black)
+//                                    }
+                                    
+                                    Spacer()
+                                    
+                                    AddButton(icon: "plus") {}
+                                }
+                                
                             }
-                            
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(16)
+                            .background(.gray.opacity(0.05))
+                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 24)))
                         }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding(16)
-                        .background(.gray.opacity(0.05))
-                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 24)))
                     }
-                }
-            } // Vgrid
+                } // Vgrid
+            }
         }
         .padding(.horizontal)
         .padding(.top)
+        .task{
+            await loadProducts()
+        }
+        
     }
+    
+    private func loadProducts() async {
+        
+        isLoading = true
+        
+        do {
+            
+            let productsModel = try await getProducts()
+            
+            print("Fetched products:", productsModel.items)
+            
+            products = productsModel.items // Update products array
+            
+            print("Updated products:", products)
+            
+            isLoading = false
+            
+        } catch AppErrors.invaliData {
+            
+            errorMessage = "Invalid data"
+            print(errorMessage as Any)
+            
+            isLoading = false
+            
+        } catch AppErrors.invalidResponse {
+            
+            errorMessage = "Invalid response"
+            print(errorMessage as Any)
+            
+            isLoading = false
+            
+        } catch AppErrors.invalidURL {
+            
+            errorMessage = "Invalid URL"
+            print(errorMessage as Any)
+            
+            isLoading = false
+            
+        } catch {
+            errorMessage = "Something is wrong"
+            print(errorMessage as Any)
+            
+            isLoading = false
+        }
+    }
+
 }
 
 #Preview {
     HomeView()
 }
+
+//// Mock data
+//let mockItems = [
+//    ItemsModel(
+//        id: "1",
+//        name: "Nike Zoom Pegasus",
+//        description: "A great running shoe.",
+//        photos: PhotoModel(url: "logo"),
+//        currentPrice: [PriceModel(NGN: [15000.0])]
+//    ),
+//    ItemsModel(
+//        id: "2",
+//        name: "Max 90 Flyease",
+//        description: "A versatile sneaker.",
+//        photos: PhotoModel(url: "logo"),
+//        currentPrice: [PriceModel(NGN: [24000.0])]
+//    )
+//]

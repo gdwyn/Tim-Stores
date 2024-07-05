@@ -17,6 +17,8 @@
 		CE92ADA02C3775AA00DC1258 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD9F2C3775AA00DC1258 /* PriceModel.swift */; };
 		CE92ADA22C3775F300DC1258 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA12C3775F300DC1258 /* PhotoModel.swift */; };
 		CE92ADA52C37781700DC1258 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA42C37781700DC1258 /* AddButton.swift */; };
+		CE92ADA82C377EFC00DC1258 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA72C377EFC00DC1258 /* AppErrors.swift */; };
+		CE92ADAA2C37800600DC1258 /* FetchProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA92C37800600DC1258 /* FetchProducts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		CE92AD9F2C3775AA00DC1258 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		CE92ADA12C3775F300DC1258 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		CE92ADA42C37781700DC1258 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		CE92ADA72C377EFC00DC1258 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
+		CE92ADA92C37800600DC1258 /* FetchProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProducts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		CE92AD942C37708900DC1258 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE92ADA92C37800600DC1258 /* FetchProducts.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 		CE92AD952C3770B900DC1258 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CE92ADA62C377EE900DC1258 /* Errors */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -131,6 +137,14 @@
 				CE92ADA42C37781700DC1258 /* AddButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CE92ADA62C377EE900DC1258 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				CE92ADA72C377EFC00DC1258 /* AppErrors.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,10 +220,12 @@
 				CE92AD982C37710700DC1258 /* HomeView.swift in Sources */,
 				CE92AD872C37688300DC1258 /* ContentView.swift in Sources */,
 				CE92AD9E2C37751600DC1258 /* ItemsModel.swift in Sources */,
+				CE92ADA82C377EFC00DC1258 /* AppErrors.swift in Sources */,
 				CE92AD852C37688300DC1258 /* Tim_StoreApp.swift in Sources */,
 				CE92ADA22C3775F300DC1258 /* PhotoModel.swift in Sources */,
 				CE92AD9C2C3774E400DC1258 /* ProductsModel.swift in Sources */,
 				CE92ADA02C3775AA00DC1258 /* PriceModel.swift in Sources */,
+				CE92ADAA2C37800600DC1258 /* FetchProducts.swift in Sources */,
 				CE92ADA52C37781700DC1258 /* AddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

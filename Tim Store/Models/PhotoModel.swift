@@ -8,5 +8,5 @@
 import Foundation
 
 struct PhotoModel: Codable {
-    let url: String
+    let url: String 
 }
