@@ -11,8 +11,8 @@ struct ItemsModel: Codable, Identifiable {
     let id: String
     let name: String
     let description: String?
-    let is_available: Bool
+    let isAvailable: Bool
     let photos: [PhotoModel]
-    //let current_price: [PriceModel]
+    let currentPrice: [PriceModel]
 
 }

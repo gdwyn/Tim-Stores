@@ -24,7 +24,7 @@ func getProducts() async throws -> ProductsModel {
     
     do {
         let decoder = JSONDecoder()
-       // decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         let productsModel = try decoder.decode(ProductsModel.self, from: data)
         print(productsModel.self)
         return productsModel

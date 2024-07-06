@@ -39,11 +39,25 @@ struct DetailView: View {
                         .font(.title2)
                         .fontWeight(.medium)
                     
-//                    if let price =
-//                        product.current_price.first?.NGN.first {
-//                        Text("NGN \(price ?? 0.0, specifier: "%.2f")")
-//                            .foregroundStyle(.gray)
-//                    }
+                    if let firstPriceValue = product.currentPrice.first?.NGN.first {
+                        // handle different PriceValue cases
+                        switch firstPriceValue {
+                        case .double(let value):
+                            Text("NGN \(value, specifier: "%.2f")")
+                                .foregroundStyle(.gray)
+                        case .array(let values):
+                            // format array of doubles into a string
+                            let formattedValues = values.map { String($0) }.joined(separator: ", ")
+                            Text("NGN [\(formattedValues)]")
+                        case .empty:
+                            Text("N/A")
+                                .foregroundColor(.red)
+                        }
+                        
+                    } else {
+                        Text("N/A")
+                            .foregroundColor(.red)
+                    }
                 } // name and price
                 
                 ScrollView {
@@ -64,7 +78,6 @@ struct DetailView: View {
                 HStack {
                     PrimaryButton(title: "Add to cart") {}
                     
-                    if product.is_available {
                         VStack(alignment: .leading, spacing: 4) {
                             Text("AVAILABILITY")
                                 .font(.footnote)
@@ -72,16 +85,15 @@ struct DetailView: View {
                             
                             HStack {
                                 Circle()
-                                    .foregroundStyle(.green)
                                     .frame(width: 8)
                                 
-                                Text("Item is available")
-                                    .foregroundStyle(.green)
+                                Text("Item is \(product.isAvailable ? "available" : "Unavailable")")
                             }
+                            .foregroundStyle(product.isAvailable ? .green : .gray)
+
                         }
                         .frame(maxWidth: .infinity)
 
-                    }
                 }
 
             }
@@ -91,25 +103,25 @@ struct DetailView: View {
     }
 }
 
-#Preview {
-    DetailView(
-    product: ItemsModel(
-        id: "",
-        name: "Nike Pegasus",
-        description: 
-        """
-        Experience the Nike Air Zoom Pegasus 39, a perfect blend of comfort, style, and performance. Designed for runners of all levels, this shoe offers superior cushioning and support, making every stride feel effortless.
-        
-        SPECIFICATIONS:
-        Weight: 10.2 oz
-        Drop: 10mm
-        Available Sizes: 7-15
-        Color: Blue
-        """,
-        is_available: true,
-        photos: [PhotoModel(url: "godwin/product_max_90_flyease_b505de_1.jpg")]
-        //current_price: [PriceModel(NGN: [5000])]
-    )
-    )
-}
+//#Preview {
+//    DetailView(
+//    product: ItemsModel(
+//        id: "",
+//        name: "Nike Pegasus",
+//        description: 
+//        """
+//        Experience the Nike Air Zoom Pegasus 39, a perfect blend of comfort, style, and performance. Designed for runners of all levels, this shoe offers superior cushioning and support, making every stride feel effortless.
+//        
+//        SPECIFICATIONS:
+//        Weight: 10.2 oz
+//        Drop: 10mm
+//        Available Sizes: 7-15
+//        Color: Blue
+//        """,
+//        isAvailable: true,
+//        photos: [PhotoModel(url: "godwin/product_max_90_flyease_b505de_1.jpg")],
+//        currentPrice: product.currentPrice.first?.NGN.first
+//    )
+//    )
+//}
 

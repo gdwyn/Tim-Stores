@@ -58,17 +58,24 @@ struct HomeView: View {
                                         
                                         Spacer()
                                         
-                                        //                                    if let price =
-                                        //                                        item.currentPrice.first?.NGN.first {
-                                        //                                        Text("NGN \(price ?? 0.0, specifier: "%.2f")") // Adjusted to handle optional Double
-                                        //                                            .bold()
-                                        //                                            .multilineTextAlignment(.leading)
-                                        //                                            .foregroundColor(.black)
-                                        //                                    }
-                                        
-                                        Text("NGN 5,000")
-                                            .bold()
-                                            .foregroundStyle(.gray)
+                                        if let firstPriceValue = item.currentPrice.first?.NGN.first {
+                                            // handle different PriceValue cases
+                                            switch firstPriceValue {
+                                            case .double(let value):
+                                                Text("NGN \(value, specifier: "%.2f")")
+                                                    .foregroundStyle(.gray)
+                                            case .array(let values):
+                                                // format array of doubles into a string
+                                                let formattedValues = values.map { String($0) }.joined(separator: ", ")
+                                                Text("NGN [\(formattedValues)]")
+                                            case .empty:
+                                                Text("N/A")
+                                                    .foregroundColor(.red)
+                                            }
+                                        } else {
+                                            Text("N/A")
+                                                .foregroundColor(.red)
+                                        }
                                         
                                     }
                                     .frame(maxWidth: .infinity, maxHeight: .infinity)
