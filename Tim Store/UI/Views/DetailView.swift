@@ -36,8 +36,8 @@ struct DetailView: View {
                                 
                 VStack(alignment: .leading, spacing: 8) {
                     Text(product.name)
-                        .font(.title)
-                    .fontWeight(.medium)
+                        .font(.title2)
+                        .fontWeight(.medium)
                     
 //                    if let price =
 //                        product.current_price.first?.NGN.first {
@@ -50,6 +50,7 @@ struct DetailView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("DESCRIPTION")
                             .foregroundStyle(.gray)
+                            .font(.callout)
                         
                         if let description = product.description {
                             Text(description)

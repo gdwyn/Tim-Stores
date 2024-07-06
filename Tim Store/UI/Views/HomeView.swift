@@ -30,48 +30,52 @@ struct HomeView: View {
                     ScrollView(showsIndicators: false) {
                         LazyVGrid (columns: columns) {
                             ForEach( products) { item in
-                                
-                                VStack(alignment: .leading) {
-                                    
-                                    Text(item.name)
-                                    
-                                    if let imageUrl = item.photos.first?.url, 
-                                        let url = URL(string: "https://api.timbu.cloud/images/\(imageUrl)") {
+                                NavigationLink {
+                                    DetailView(product: item)
+                                } label: {
+                                    VStack(alignment: .leading) {
                                         
-                                        AsyncImage(url: url) { image in
-                                            image
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 130)
-                                                .padding(.vertical, 20)
-                                        } placeholder: {
-                                            ProgressView()
-                                                .frame(width: 130)
-                                                .frame(height: 90)
-                                                .padding(.vertical, 20)
+                                        Text(item.name)
+                                            .foregroundStyle(.black)
+                                        
+                                        if let imageUrl = item.photos.first?.url,
+                                            let url = URL(string: "https://api.timbu.cloud/images/\(imageUrl)") {
+                                            
+                                            AsyncImage(url: url) { image in
+                                                image
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 130)
+                                                    .padding(.vertical, 20)
+                                            } placeholder: {
+                                                ProgressView()
+                                                    .frame(width: 130)
+                                                    .frame(height: 90)
+                                                    .padding(.vertical, 20)
+                                            }
                                         }
+                                        
+                                        
+                                        Spacer()
+                                        
+                                        //                                    if let price =
+                                        //                                        item.currentPrice.first?.NGN.first {
+                                        //                                        Text("NGN \(price ?? 0.0, specifier: "%.2f")") // Adjusted to handle optional Double
+                                        //                                            .bold()
+                                        //                                            .multilineTextAlignment(.leading)
+                                        //                                            .foregroundColor(.black)
+                                        //                                    }
+                                        
+                                        Text("NGN 5,000")
+                                            .bold()
+                                            .foregroundStyle(.gray)
+                                        
                                     }
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    //                                    if let price =
-                                    //                                        item.currentPrice.first?.NGN.first {
-                                    //                                        Text("NGN \(price ?? 0.0, specifier: "%.2f")") // Adjusted to handle optional Double
-                                    //                                            .bold()
-                                    //                                            .multilineTextAlignment(.leading)
-                                    //                                            .foregroundColor(.black)
-                                    //                                    }
-                                    
-                                    Text("NGN 5,000")
-                                        .bold()
-                                        .foregroundStyle(.gray)
-                                    
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .padding(16)
+                                    .background(.gray.opacity(0.05))
+                                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 24)))
                                 }
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .padding(16)
-                                .background(.gray.opacity(0.05))
-                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 24)))
                             }
                         }
                     } // Vgrid
