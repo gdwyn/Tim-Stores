@@ -1,5 +1,3 @@
-<img width="100" alt="appicon" src="https://github.com/godwinnebri/TrueShopa/assets/104990430/1349804c-235a-4de2-976f-846dd9637d7f">
-
 # Tim-Stores
 
 ## Description
