@@ -10,5 +10,5 @@ import Foundation
 enum AppErrors: String, Error {
     case invalidResponse = "Invalid response from the server. Please try again."
     case invalidURL = "The url provided is invalid. Please try again."
-    case invaliData = "The data provided is invalid. Please try again."
+    case invalidData = "The data provided is invalid. Please try again."
 }

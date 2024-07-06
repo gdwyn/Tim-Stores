@@ -17,67 +17,71 @@ struct HomeView: View {
     @State private var errorMessage: String?
 
     var body: some View {
-        VStack(spacing: 24) {
-            Image("logo")
-                .resizable()
-                .frame(width: 34, height: 34)
-                .scaledToFit()
-            
-            if isLoading {
-                ProgressView()
-            } else {
-                ScrollView(showsIndicators: false) {
-                    LazyVGrid (columns: columns) {
-                        ForEach( products) { item in
-                            VStack(alignment: .leading) {
+        NavigationStack {
+            VStack(spacing: 24) {
+                Image("logo")
+                    .resizable()
+                    .frame(width: 34, height: 34)
+                    .scaledToFit()
+                
+                if isLoading {
+                    ProgressView()
+                } else {
+                    ScrollView(showsIndicators: false) {
+                        LazyVGrid (columns: columns) {
+                            ForEach( products) { item in
                                 
-                                Text(item.name)
-                                
-                                if let imageUrl = item.photos.first?.url, 
-                                    let url = URL(string: "https://api.timbu.cloud/images/\(imageUrl)") {
+                                VStack(alignment: .leading) {
                                     
-                                    AsyncImage(url: url) { image in
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 130)
-                                            .padding(.vertical, 20)
-                                    } placeholder: {
-                                        ProgressView()
+                                    Text(item.name)
+                                    
+                                    if let imageUrl = item.photos.first?.url, 
+                                        let url = URL(string: "https://api.timbu.cloud/images/\(imageUrl)") {
+                                        
+                                        AsyncImage(url: url) { image in
+                                            image
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 130)
+                                                .padding(.vertical, 20)
+                                        } placeholder: {
+                                            ProgressView()
+                                                .frame(width: 130)
+                                                .frame(height: 90)
+                                                .padding(.vertical, 20)
+                                        }
                                     }
-                                }
-                                
-                                
-                                Spacer()
-                                
-                                HStack {
-//                                    if let price =
-//                                        item.currentPrice.first?.NGN.first {
-//                                        Text("NGN \(price ?? 0.0, specifier: "%.2f")") // Adjusted to handle optional Double
-//                                            .bold()
-//                                            .multilineTextAlignment(.leading)
-//                                            .foregroundColor(.black)
-//                                    }
+                                    
                                     
                                     Spacer()
                                     
-                                    AddButton(icon: "plus") {}
+                                    //                                    if let price =
+                                    //                                        item.currentPrice.first?.NGN.first {
+                                    //                                        Text("NGN \(price ?? 0.0, specifier: "%.2f")") // Adjusted to handle optional Double
+                                    //                                            .bold()
+                                    //                                            .multilineTextAlignment(.leading)
+                                    //                                            .foregroundColor(.black)
+                                    //                                    }
+                                    
+                                    Text("NGN 5,000")
+                                        .bold()
+                                        .foregroundStyle(.gray)
+                                    
                                 }
-                                
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .padding(16)
+                                .background(.gray.opacity(0.05))
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 24)))
                             }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .padding(16)
-                            .background(.gray.opacity(0.05))
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 24, height: 24)))
                         }
-                    }
-                } // Vgrid
+                    } // Vgrid
+                }
             }
+            .padding(.horizontal)
+            .padding(.top)
+            .task{
+                await loadProducts()
         }
-        .padding(.horizontal)
-        .padding(.top)
-        .task{
-            await loadProducts()
         }
         
     }
@@ -89,16 +93,12 @@ struct HomeView: View {
         do {
             
             let productsModel = try await getProducts()
-            
-            print("Fetched products:", productsModel.items)
-            
+                        
             products = productsModel.items // Update products array
-            
-            print("Updated products:", products)
-            
+                        
             isLoading = false
             
-        } catch AppErrors.invaliData {
+        } catch AppErrors.invalidData {
             
             errorMessage = "Invalid data"
             print(errorMessage as Any)

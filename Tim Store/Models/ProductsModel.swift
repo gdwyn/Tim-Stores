@@ -8,8 +8,5 @@
 import Foundation
 
 struct ProductsModel: Codable {
-    let page: Int
-    let size: Int
-    let total: Int
     let items: [ItemsModel]
 }

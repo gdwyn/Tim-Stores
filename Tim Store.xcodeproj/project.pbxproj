@@ -19,6 +19,8 @@
 		CE92ADA52C37781700DC1258 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA42C37781700DC1258 /* AddButton.swift */; };
 		CE92ADA82C377EFC00DC1258 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA72C377EFC00DC1258 /* AppErrors.swift */; };
 		CE92ADAA2C37800600DC1258 /* FetchProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA92C37800600DC1258 /* FetchProducts.swift */; };
+		CE97B1D92C38C90C0058C525 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97B1D82C38C90C0058C525 /* DetailView.swift */; };
+		CE97B1DB2C38D59B0058C525 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97B1DA2C38D59B0058C525 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		CE92ADA42C37781700DC1258 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		CE92ADA72C377EFC00DC1258 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		CE92ADA92C37800600DC1258 /* FetchProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProducts.swift; sourceTree = "<group>"; };
+		CE97B1D82C38C90C0058C525 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		CE97B1DA2C38D59B0058C525 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				CE92AD972C37710700DC1258 /* HomeView.swift */,
+				CE97B1D82C38C90C0058C525 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CE92ADA42C37781700DC1258 /* AddButton.swift */,
+				CE97B1DA2C38D59B0058C525 /* PrimaryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 				CE92AD9E2C37751600DC1258 /* ItemsModel.swift in Sources */,
 				CE92ADA82C377EFC00DC1258 /* AppErrors.swift in Sources */,
 				CE92AD852C37688300DC1258 /* Tim_StoreApp.swift in Sources */,
+				CE97B1D92C38C90C0058C525 /* DetailView.swift in Sources */,
+				CE97B1DB2C38D59B0058C525 /* PrimaryButton.swift in Sources */,
 				CE92ADA22C3775F300DC1258 /* PhotoModel.swift in Sources */,
 				CE92AD9C2C3774E400DC1258 /* ProductsModel.swift in Sources */,
 				CE92ADA02C3775AA00DC1258 /* PriceModel.swift in Sources */,

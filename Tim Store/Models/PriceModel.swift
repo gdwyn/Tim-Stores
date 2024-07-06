@@ -9,8 +9,5 @@ import Foundation
 
 struct PriceModel: Codable {
     let NGN: [Double?]
-
-    enum CodingKeys: String, CodingKey {
-        case NGN
-    }
 }
+

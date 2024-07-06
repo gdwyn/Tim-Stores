@@ -11,14 +11,8 @@ struct ItemsModel: Codable, Identifiable {
     let id: String
     let name: String
     let description: String?
+    let is_available: Bool
     let photos: [PhotoModel]
     //let current_price: [PriceModel]
 
-//    enum CodingKeys: String, CodingKey {
-//        case id
-//        case name
-//        case description
-//        case photos
-//        case currentPrice = "current_price"
-//    }
 }
