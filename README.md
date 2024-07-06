@@ -18,7 +18,7 @@ A swiftUI shopping app implementing the timbu.cloud api
 <img width="366" alt="Screenshot 2024-07-06 at 4 10 14 PM" src="https://github.com/godwinnebri/Tim-Stores/assets/104990430/80fe0b16-0438-4102-beb8-ef834337a41e">
 
 ## Test app
-Test the latest version of Tim Stores on appetize [here]([https://appetize.io/app/ios/com.godwin.Tim-Store?device=iphone14pro&osVersion=17.2](https://appetize.io/app/b_nkkuqcau5xrd2onv5j4k7twjq4)).
+Test the latest version of Tim Stores on appetize [here](https://appetize.io/app/b_nkkuqcau5xrd2onv5j4k7twjq4).
 
 ## Download iOS debug app
 Test the Tim Stores debug app [here](https://drive.google.com/file/d/1J1dK1frLS2HwV2SxApM2i0kWJANd-ycu/view?usp=sharing).
