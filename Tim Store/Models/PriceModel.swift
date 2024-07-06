@@ -38,7 +38,7 @@ enum PriceValue: Codable {
         case .array(let value):
             try container.encode(value)
         case .empty:
-            // Encode as an empty array or handle as appropriate for your use case
+            // encode as an empty array or handle as appropriate for your use case
             try container.encode([Double]())
         }
     }

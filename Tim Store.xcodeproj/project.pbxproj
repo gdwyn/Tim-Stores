@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE92AD852C37688300DC1258 /* Tim_StoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD842C37688300DC1258 /* Tim_StoreApp.swift */; };
-		CE92AD872C37688300DC1258 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD862C37688300DC1258 /* ContentView.swift */; };
 		CE92AD892C37688600DC1258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE92AD882C37688600DC1258 /* Assets.xcassets */; };
 		CE92AD8C2C37688600DC1258 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE92AD8B2C37688600DC1258 /* Preview Assets.xcassets */; };
 		CE92AD982C37710700DC1258 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92AD972C37710700DC1258 /* HomeView.swift */; };
@@ -18,15 +17,17 @@
 		CE92ADA22C3775F300DC1258 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA12C3775F300DC1258 /* PhotoModel.swift */; };
 		CE92ADA52C37781700DC1258 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA42C37781700DC1258 /* AddButton.swift */; };
 		CE92ADA82C377EFC00DC1258 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA72C377EFC00DC1258 /* AppErrors.swift */; };
-		CE92ADAA2C37800600DC1258 /* FetchProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA92C37800600DC1258 /* FetchProducts.swift */; };
+		CE92ADAA2C37800600DC1258 /* GetProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92ADA92C37800600DC1258 /* GetProducts.swift */; };
 		CE97B1D92C38C90C0058C525 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97B1D82C38C90C0058C525 /* DetailView.swift */; };
 		CE97B1DB2C38D59B0058C525 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97B1DA2C38D59B0058C525 /* PrimaryButton.swift */; };
+		CEEA790C2C396F9200C9AE68 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA790B2C396F9200C9AE68 /* ViewModel.swift */; };
+		CEEA790F2C3980E800C9AE68 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA790E2C3980E800C9AE68 /* ProductCard.swift */; };
+		CEEA79112C3987F800C9AE68 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA79102C3987F800C9AE68 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE92AD812C37688300DC1258 /* Tim Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tim Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE92AD842C37688300DC1258 /* Tim_StoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tim_StoreApp.swift; sourceTree = "<group>"; };
-		CE92AD862C37688300DC1258 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE92AD882C37688600DC1258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE92AD8B2C37688600DC1258 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE92AD972C37710700DC1258 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -36,9 +37,12 @@
 		CE92ADA12C3775F300DC1258 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		CE92ADA42C37781700DC1258 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		CE92ADA72C377EFC00DC1258 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
-		CE92ADA92C37800600DC1258 /* FetchProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProducts.swift; sourceTree = "<group>"; };
+		CE92ADA92C37800600DC1258 /* GetProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProducts.swift; sourceTree = "<group>"; };
 		CE97B1D82C38C90C0058C525 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CE97B1DA2C38D59B0058C525 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		CEEA790B2C396F9200C9AE68 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CEEA790E2C3980E800C9AE68 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		CEEA79102C3987F800C9AE68 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,6 @@
 				CE92AD942C37708900DC1258 /* Services */,
 				CE92AD952C3770B900DC1258 /* Utilities */,
 				CE92AD842C37688300DC1258 /* Tim_StoreApp.swift */,
-				CE92AD862C37688300DC1258 /* ContentView.swift */,
 				CE92AD882C37688600DC1258 /* Assets.xcassets */,
 				CE92AD8A2C37688600DC1258 /* Preview Content */,
 			);
@@ -114,7 +117,7 @@
 		CE92AD942C37708900DC1258 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CE92ADA92C37800600DC1258 /* FetchProducts.swift */,
+				CE92ADA92C37800600DC1258 /* GetProducts.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -130,8 +133,8 @@
 		CE92AD962C3770E800DC1258 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CE92AD972C37710700DC1258 /* HomeView.swift */,
-				CE97B1D82C38C90C0058C525 /* DetailView.swift */,
+				CEEA790A2C396F6400C9AE68 /* Home */,
+				CEEA790D2C397F8A00C9AE68 /* Detail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +144,8 @@
 			children = (
 				CE92ADA42C37781700DC1258 /* AddButton.swift */,
 				CE97B1DA2C38D59B0058C525 /* PrimaryButton.swift */,
+				CEEA790E2C3980E800C9AE68 /* ProductCard.swift */,
+				CEEA79102C3987F800C9AE68 /* Toast.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -151,6 +156,23 @@
 				CE92ADA72C377EFC00DC1258 /* AppErrors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		CEEA790A2C396F6400C9AE68 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE92AD972C37710700DC1258 /* HomeView.swift */,
+				CEEA790B2C396F9200C9AE68 /* ViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CEEA790D2C397F8A00C9AE68 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CE97B1D82C38C90C0058C525 /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,17 +246,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE92AD982C37710700DC1258 /* HomeView.swift in Sources */,
-				CE92AD872C37688300DC1258 /* ContentView.swift in Sources */,
 				CE92AD9E2C37751600DC1258 /* ItemsModel.swift in Sources */,
 				CE92ADA82C377EFC00DC1258 /* AppErrors.swift in Sources */,
 				CE92AD852C37688300DC1258 /* Tim_StoreApp.swift in Sources */,
 				CE97B1D92C38C90C0058C525 /* DetailView.swift in Sources */,
+				CEEA790C2C396F9200C9AE68 /* ViewModel.swift in Sources */,
+				CEEA79112C3987F800C9AE68 /* Toast.swift in Sources */,
 				CE97B1DB2C38D59B0058C525 /* PrimaryButton.swift in Sources */,
 				CE92ADA22C3775F300DC1258 /* PhotoModel.swift in Sources */,
 				CE92AD9C2C3774E400DC1258 /* ProductsModel.swift in Sources */,
 				CE92ADA02C3775AA00DC1258 /* PriceModel.swift in Sources */,
-				CE92ADAA2C37800600DC1258 /* FetchProducts.swift in Sources */,
+				CE92ADAA2C37800600DC1258 /* GetProducts.swift in Sources */,
 				CE92ADA52C37781700DC1258 /* AddButton.swift in Sources */,
+				CEEA790F2C3980E800C9AE68 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
