@@ -19,7 +19,7 @@ A swiftUI shopping app implementing the timbu.cloud api
 Test the latest version of Tim Stores on appetize [here](https://appetize.io/app/b_nkkuqcau5xrd2onv5j4k7twjq4).
 
 ## Download iOS debug app
-Test the Tim Stores debug app [here](https://drive.google.com/file/d/1J1dK1frLS2HwV2SxApM2i0kWJANd-ycu/view?usp=sharing).
+Download the Tim Stores iOS debug app [here](https://drive.google.com/file/d/1J1dK1frLS2HwV2SxApM2i0kWJANd-ycu/view?usp=sharing).
 
 ## Setup Instructions
 1. **Clone the repository**
